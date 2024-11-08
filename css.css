@@ -33,6 +33,9 @@ header{
 align-items: center;
 color: white;
 }
+header h1{
+    font-size: 60px;
+}
 header span{
     font-size: 20px;
     color: white;
@@ -48,16 +51,17 @@ header span{
     font-weight: 700;display: block;
     width: fit-content;
     margin: 20px;
-    color: black;
+    color: white;
 }
 .inout{
     outline:none;
     border-radius: 10px;
-    height: 30px;
+    height: 50px;
     color: white;
-    width: 200px;
+    width: 250px;
     border: 2px solid orangered;
     font-size: 20px;
+    font-weight: 700;
 background-color: transparent;
 }
 main{
@@ -78,12 +82,12 @@ main{
     position: relative;
     margin: 0px;
 }
-.note textarea{
+.note textarea:disabled{
     width: 100%;
     width: 350px;
     min-width: 350px;;
     max-width: 350px;
-    padding: 12px 50px 12px 10px;
+    padding: 12px 100px 12px 10px;
     min-height: 50px;
     height:50px;
     margin: 10px;
@@ -91,7 +95,23 @@ main{
     border-radius: 10px;
     font-size: 20px;
     position: relative;
-    
+    color: white;
+}
+.note textarea{
+    width: 100%;
+    width: 350px;
+    min-width: 350px;;
+    max-width: 350px;
+    padding: 12px 100px 12px 10px;
+    min-height: 50px;
+    height:50px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    position: relative;
+    color: black;
+    transition: 0.3s;
 }
 .note .icons{
     position: absolute;
@@ -123,6 +143,7 @@ main{
 }
 .btns{
     z-index: 10;
+
 }
 
 .save{
@@ -165,6 +186,7 @@ main{
     display: block;
     animation-name:ops;
     animation-duration: 0.3s;
+    animation-direction: alternate;
 }
 @keyframes ops{
     from{
@@ -174,6 +196,7 @@ main{
         opacity: 1;
     }
 }
+
 footer{
     color: white;
     
